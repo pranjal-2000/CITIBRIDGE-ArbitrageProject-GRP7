@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<body>
+<br>
+<br>
+<h1 align="center" style="color: black"> NSE/BSE ARBITRAGE RECOMMENDATION SYSTEM </h1>
+
+<br>
+<h2 align="center" style="color: black;">Saved Stocks</h2>
+
+<!--<br>
+<a mat-raised-button  href="https://www.google.com/" target="_blank" id ="home" >Home</a>
+<a mat-raised-button  href="https://www.google.com/" target="_blank" id ="savedpage">Saved</a>
+<br>-->
+<br>
+<table mat-table [dataSource]="saveddata" class="mat-elevation-z8" id ="disp2">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+
+  <tbody>
+  <!--<ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> <h4>No.</h4> </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>-->
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> <h4>Name </h4></th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="NSE">
+    <th mat-header-cell *matHeaderCellDef><h4> NSE</h4></th>
+    <td mat-cell *matCellDef="let element"> {{element.nseprice}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="BSE">
+    <th mat-header-cell *matHeaderCellDef><h4> BSE </h4></th>
+    <td mat-cell *matCellDef="let element"> {{element.bseprice}} </td>
+  </ng-container>
+
+<ng-container matColumnDef="difference">
+    <th mat-header-cell *matHeaderCellDef> <h4>Difference</h4></th>
+    <td mat-cell *matCellDef="let element"> {{element.difference}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</tbody>
+</table>
+
+<!--<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+showFirstLastButtons 
+aria-label="Select page of periodic elements">
+</mat-paginator>-->
+
+</body>
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #449a97;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #0e0d0d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav-right {
+    float: right;
+  }
+  </style>
+  </head>
+  
+  <div class="topnav">
+    <div class="topnav-right">
+      <a href="/saved"><strong>Saved Stocks</strong></a>
+    </div>
+  </div>
+
+<h1 align="center"> NSE/BSE ARBITRAGE RECOMMENDATION SYSTEM </h1>
+<hr>
+<br>
+<h2 align="center">Arbitrage Opportunities</h2>
+<hr>
+<br>
+
+
+<table mat-table [dataSource]="data" class="mat-elevation-z8" id="disp" ng >-->
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column --> 
+  <!--<ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>-->
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.company_name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="NSE">
+    <th mat-header-cell *matHeaderCellDef> NSE</th>
+    <td mat-cell *matCellDef="let element"> {{element.nse_price}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="BSE">
+    <th mat-header-cell *matHeaderCellDef> BSE </th>
+    <td mat-cell *matCellDef="let element"> {{element.bse_price}} </td>
+  </ng-container>
+
+<ng-container matColumnDef="difference">
+    <th mat-header-cell *matHeaderCellDef> Difference</th>
+    <td mat-cell *matCellDef="let element"> {{element.diff}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="save">
+    <th mat-header-cell *matHeaderCellDef> Save</th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button id="b1" color="primary" (click)="getRecord(element.company_name,element.nse_price,element.bse_price,element.diff)">Save</button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> 
+
+</body>
+

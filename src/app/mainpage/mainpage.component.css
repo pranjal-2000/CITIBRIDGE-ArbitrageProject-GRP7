@@ -1,0 +1,77 @@
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #15278d;
+  color: rgb(26, 7, 109);
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  height: 56px;
+  font-weight: bold;
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+}
+table {
+  width: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg,white , #49a09d);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+#disp {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#disp td, #disp th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#disp tr:nth-child(even){background-color: #f2f2f2;}
+
+#disp tr:hover {background-color: #ddd; font-weight: bold;}
+
+#disp th {
+  padding-top: 20px;
+  padding-bottom: 6px;
+  text-align: center;
+  background-color: #49a09d;
+  color: black;
+}
+
+#b1 {
+  background-color: #49a09d ;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#b1:hover{background-color: aliceblue;}
+
+tbody {
+	
+			background-color: rgba(255,255,255,0.3);
+		
+	
+}
+
+
+h1 { 
+  display:block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
